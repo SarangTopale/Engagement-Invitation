@@ -7,7 +7,7 @@
 
   <!-- Editorial Western Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" client>
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -372,10 +372,9 @@
 </head>
 <body>
 
-  <!-- Audio Element (Direct CDN mp3) -->
+  <!-- Audio Element (Direct local reference) -->
   <audio id="inviteAudio" loop preload="auto" playsinline>
-    <source src="https://actions.google.com/sounds/v1/water/gentle_stream_water_nature.ogg" type="audio/ogg">
-    <source src="https://cdn.jsdelivr.net/gh/rafaelreis-hotmart/Audio-Sample-files@master/sample.mp3" type="audio/mpeg">
+    <source src="Kesariya - Flute _ Instrumental.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Floating Audio Equalizer -->
@@ -519,9 +518,7 @@
     const audio = document.getElementById('inviteAudio');
 
     const SMS_RECIPIENT = "+917385410278";
-
-    // You can replace this with your own local file path (e.g., './song.mp3') or any hosting link:
-    const MUSIC_SOURCE = "https://assets.mixkit.co/music/preview/mixkit-romantic-flute-and-guitar-634.mp3";
+    const MUSIC_SOURCE = "Kesariya - Flute _ Instrumental.mp3";
 
     function startInvitation() {
       // Confetti burst
@@ -544,6 +541,7 @@
       // Set audio source and trigger playback
       audio.src = MUSIC_SOURCE;
       audio.volume = 0.7;
+      audio.load();
 
       const playPromise = audio.play();
       if (playPromise !== undefined) {
@@ -551,8 +549,7 @@
           bars.classList.remove('paused');
           label.textContent = "Music";
         }).catch(err => {
-          // If browser policy blocks automatic media, update indicator so user can tap
-          console.warn("Audio autoplay prevented by client policy:", err);
+          console.warn("Audio playback delayed until user interaction:", err);
           bars.classList.add('paused');
           label.textContent = "Play";
         });
