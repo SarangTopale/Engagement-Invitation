@@ -369,7 +369,7 @@
       border-color: var(--champagne-gold);
     }
 
-    /* Understated Footer Credit */
+    /* Footer Tag */
     .credit-tag {
       font-size: 0.65rem;
       letter-spacing: 2.5px;
@@ -385,9 +385,9 @@
 </head>
 <body>
 
-  <!-- Audio Element configured for your uploaded MP3 -->
+  <!-- Audio Element (Direct flute stream for online previews) -->
   <audio id="inviteAudio" loop preload="auto" playsinline>
-    <source src="Moh Moh Ke Dhaage Flute.mp3" type="audio/mpeg">
+    <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-flute-and-guitar-634.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Floating Audio Equalizer -->
@@ -518,7 +518,6 @@
           </a>
         </div>
 
-        <!-- Custom Credit Tag -->
         <p class="credit-tag">Crafted with ♥ by Sarang</p>
       </div>
 
@@ -534,7 +533,7 @@
     const audio = document.getElementById('inviteAudio');
 
     const WHATSAPP_NUMBER = "917385410278";
-    const MUSIC_SOURCE = "Moh Moh Ke Dhaage Flute.mp3";
+    const MUSIC_SOURCE = "https://assets.mixkit.co/music/preview/mixkit-romantic-flute-and-guitar-634.mp3";
 
     function startInvitation() {
       // Confetti burst
