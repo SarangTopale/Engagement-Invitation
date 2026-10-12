@@ -213,7 +213,7 @@
     .slide {
       position: absolute;
       inset: 0;
-      padding: 42px 24px 28px;
+      padding: 42px 24px 34px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -295,15 +295,15 @@
       background: #ffffff;
       border: 1px solid rgba(201, 168, 106, 0.28);
       border-radius: 18px;
-      padding: 14px 16px;
-      margin: 8px 0 14px;
+      padding: 16px 16px;
+      margin: 10px 0 16px;
       box-shadow: 0 10px 30px rgba(16, 38, 31, 0.05);
     }
     .cal-split {
       display: flex;
       justify-content: space-around;
       align-items: baseline;
-      padding: 4px 0 8px;
+      padding: 4px 0 10px;
       border-bottom: 1px solid rgba(201, 168, 106, 0.22);
     }
     .cal-text {
@@ -368,26 +368,13 @@
       background: #fdfaf4;
       border-color: var(--champagne-gold);
     }
-
-    /* Footer Tag */
-    .credit-tag {
-      font-size: 0.65rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--soft-sage);
-      margin-top: 14px;
-      font-weight: 500;
-      opacity: 0.85;
-      text-align: center;
-      user-select: none;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Audio Element (Direct flute stream for online previews) -->
+  <!-- Audio Element -->
   <audio id="inviteAudio" loop preload="auto" playsinline>
-    <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-flute-and-guitar-634.mp3" type="audio/mpeg">
+    <source src="Kesariya - Flute _ Instrumental.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Floating Audio Equalizer -->
@@ -495,7 +482,7 @@
             <span class="cal-num">24</span>
             <span class="cal-text">11:30 AM</span>
           </div>
-          <div style="font-family: 'Italiana', serif; font-size: 0.92rem; letter-spacing: 3px; text-transform: uppercase; color: var(--champagne-gold); margin-top: 8px;">
+          <div style="font-family: 'Italiana', serif; font-size: 0.92rem; letter-spacing: 3px; text-transform: uppercase; color: var(--champagne-gold); margin-top: 10px;">
             October 2026
           </div>
           <div style="font-family: 'Italiana', serif; font-size: 1.25rem; font-weight: 600; color: var(--primary-emerald); margin-top: 6px;">
@@ -517,8 +504,6 @@
             View Location on Maps
           </a>
         </div>
-
-        <p class="credit-tag">Crafted with ♥ by Sarang</p>
       </div>
 
     </div>
@@ -533,7 +518,7 @@
     const audio = document.getElementById('inviteAudio');
 
     const WHATSAPP_NUMBER = "917385410278";
-    const MUSIC_SOURCE = "https://assets.mixkit.co/music/preview/mixkit-romantic-flute-and-guitar-634.mp3";
+    const MUSIC_SOURCE = "Kesariya - Flute _ Instrumental.mp3";
 
     function startInvitation() {
       // Confetti burst
