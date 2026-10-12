@@ -7,7 +7,7 @@
 
   <!-- Editorial Western Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" client>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -372,7 +372,7 @@
 </head>
 <body>
 
-  <!-- Audio Element (Direct local reference) -->
+  <!-- Audio Element -->
   <audio id="inviteAudio" loop preload="auto" playsinline>
     <source src="Kesariya - Flute _ Instrumental.mp3" type="audio/mpeg">
   </audio>
@@ -494,8 +494,8 @@
         </div>
 
         <div class="action-row">
-          <a class="btn btn-gold" id="smsLink" href="#">
-            Send Wishes via SMS
+          <a class="btn btn-gold" id="whatsappLink" href="#" target="_blank" rel="noopener noreferrer">
+            Send Wishes via WhatsApp
           </a>
           <a class="btn btn-emerald" id="calLink" href="#" target="_blank" rel="noopener noreferrer">
             Add to Calendar
@@ -517,7 +517,7 @@
     let startTime = 0;
     const audio = document.getElementById('inviteAudio');
 
-    const SMS_RECIPIENT = "+917385410278";
+    const WHATSAPP_NUMBER = "917385410278";
     const MUSIC_SOURCE = "Kesariya - Flute _ Instrumental.mp3";
 
     function startInvitation() {
@@ -556,7 +556,7 @@
       }
 
       buildCalendar();
-      buildSMSLink();
+      buildWhatsAppLink();
       showSlide(0);
     }
 
@@ -633,12 +633,10 @@
       document.getElementById('calLink').href = calUrl;
     }
 
-    function buildSMSLink() {
-      const message = encodeURIComponent("Warmest congratulations Sarang & Apurva on your engagement! Wishing you both a lifetime of happiness, love, and togetherness.");
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      const delimiter = isIOS ? '&body=' : '?body=';
-      const smsUri = `sms:${SMS_RECIPIENT}${delimiter}${message}`;
-      document.getElementById('smsLink').href = smsUri;
+    function buildWhatsAppLink() {
+      const message = encodeURIComponent("Warmest congratulations Sarang & Apurva on your engagement! Wishing you both a lifetime of happiness, love, and togetherness. 💐✨");
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      document.getElementById('whatsappLink').href = waUrl;
     }
   </script>
 </body>
