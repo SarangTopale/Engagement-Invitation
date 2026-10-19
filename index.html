@@ -213,7 +213,7 @@
     .slide {
       position: absolute;
       inset: 0;
-      padding: 42px 24px 28px;
+      padding: 42px 24px 34px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -295,15 +295,15 @@
       background: #ffffff;
       border: 1px solid rgba(201, 168, 106, 0.28);
       border-radius: 18px;
-      padding: 14px 16px;
-      margin: 8px 0 14px;
+      padding: 16px 16px;
+      margin: 10px 0 16px;
       box-shadow: 0 10px 30px rgba(16, 38, 31, 0.05);
     }
     .cal-split {
       display: flex;
       justify-content: space-around;
       align-items: baseline;
-      padding: 4px 0 8px;
+      padding: 4px 0 10px;
       border-bottom: 1px solid rgba(201, 168, 106, 0.22);
     }
     .cal-text {
@@ -367,19 +367,6 @@
     .btn-outline:hover {
       background: #fdfaf4;
       border-color: var(--champagne-gold);
-    }
-
-    /* Credit Tag */
-    .credit-tag {
-      font-size: 0.65rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--soft-sage);
-      margin-top: 14px;
-      font-weight: 500;
-      opacity: 0.85;
-      text-align: center;
-      user-select: none;
     }
   </style>
 </head>
@@ -495,14 +482,14 @@
             <span class="cal-num">24</span>
             <span class="cal-text">11:30 AM</span>
           </div>
-          <div style="font-family: 'Italiana', serif; font-size: 0.92rem; letter-spacing: 3px; text-transform: uppercase; color: var(--champagne-gold); margin-top: 8px;">
+          <div style="font-family: 'Italiana', serif; font-size: 0.92rem; letter-spacing: 3px; text-transform: uppercase; color: var(--champagne-gold); margin-top: 10px;">
             October 2026
           </div>
           <div style="font-family: 'Italiana', serif; font-size: 1.25rem; font-weight: 600; color: var(--primary-emerald); margin-top: 6px;">
-            Datey Mangal Karyalaya
+            Pratapgad Banquet Hall
           </div>
           <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">
-            (दाते मंगल कार्यालय)
+            (प्रतापगड बँक्वेट हॉल)
           </div>
         </div>
 
@@ -513,13 +500,10 @@
           <a class="btn btn-emerald" id="calLink" href="#" target="_blank" rel="noopener noreferrer">
             Add to Calendar
           </a>
-          <a class="btn btn-outline" href="https://maps.app.goo.gl/HzvSimCMhD6NneKE6" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-outline" href="https://share.google/tlaBf6LVfHxGMOHU4" target="_blank" rel="noopener noreferrer">
             View Location on Maps
           </a>
         </div>
-
-        <!-- Credit Tag -->
-        <p class="credit-tag">Crafted with ♥ by Sarang</p>
       </div>
 
     </div>
@@ -642,8 +626,8 @@
 
     function buildCalendar() {
       const title = encodeURIComponent("Engagement: Sarang & Apurva");
-      const details = encodeURIComponent("Engagement ceremony of Sarang Topale & Apurva Pahade at Datey Mangal Karyalaya.\n\nLocation Maps: https://maps.app.goo.gl/HzvSimCMhD6NneKE6");
-      const location = encodeURIComponent("Datey Mangal Karyalaya (दाते मंगल कार्यालय)");
+      const details = encodeURIComponent("Engagement ceremony of Sarang Topale & Apurva Pahade at Pratapgad Banquet Hall.\n\nLocation Maps: https://share.google/tlaBf6LVfHxGMOHU4");
+      const location = encodeURIComponent("Pratapgad Banquet Hall (प्रतापगड बँक्वेट हॉल)");
       const dates = "20261024T060000Z/20261024T103000Z";
       const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
       document.getElementById('calLink').href = calUrl;
